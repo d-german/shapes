@@ -1,12 +1,38 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using ShapeLibrary;
 
 namespace ShapesController
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var shapes = new List<Shape>
+            {
+                new Square()
+            };
+
+            Display(shapes);
+            Animate(new Line());
+        }
+
+        private static void Display(IEnumerable<Shape> shapes)
+        {
+            foreach (var shape in shapes)
+            {
+                shape.Display();
+            }
+        }
+
+        private static void Animate(Shape shape)
+        {
+            var currentLocation = shape.GetLocation();
+
+            shape.SetLocation(new Point
+            {
+                X = ++currentLocation.X,
+                Y = --currentLocation.X
+            });
         }
     }
 }

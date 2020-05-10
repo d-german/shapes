@@ -7,7 +7,7 @@ namespace ShapesController
     {
         private static void Main()
         {
-            var shapes = new List<Shape>
+            var shapes = new List<IShape>
             {
                 new Square()
             };
@@ -16,7 +16,7 @@ namespace ShapesController
             Animate(new Line());
         }
 
-        private static void Display(IEnumerable<Shape> shapes)
+        private static void Display(IEnumerable<IShape> shapes)
         {
             foreach (var shape in shapes)
             {
@@ -24,7 +24,7 @@ namespace ShapesController
             }
         }
 
-        private static void Animate(Shape shape)
+        private static void Animate(IShape shape)
         {
             var currentLocation = shape.GetLocation();
 

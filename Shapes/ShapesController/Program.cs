@@ -5,7 +5,7 @@ namespace ShapesController
 {
     internal static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var shapes = new List<Shape>
             {

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ShapeLibrary;
+using XShapeLibrary;
 
 namespace ShapesController
 {
@@ -7,32 +8,22 @@ namespace ShapesController
     {
         private static void Main()
         {
-            var shapes = new List<IShape>
-            {
-                new Square()
-            };
+            Circle circle = new Circle();
 
-            Display(shapes);
-            Animate(new Line());
-        }
+            circle.XDisplay();
+            circle.Display();
 
-        private static void Display(IEnumerable<IShape> shapes)
-        {
-            foreach (var shape in shapes)
-            {
-                shape.Display();
-            }
-        }
+            IShape circle1 = new Circle();
 
-        private static void Animate(IShape shape)
-        {
-            var currentLocation = shape.GetLocation();
+            circle1.Display();
+            // circle1.XDisplay(); compile error
 
-            shape.SetLocation(new Point
-            {
-                X = ++currentLocation.X,
-                Y = --currentLocation.X
-            });
+            XCircle circle2 = new Circle();
+
+            circle2.XDisplay();
+            // circle2.Display(); compile error
+
+
         }
     }
 }

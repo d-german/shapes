@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ShapeLibrary;
+﻿using ShapeLibrary;
 using XShapeLibrary;
 
 namespace ShapesController
@@ -22,8 +21,6 @@ namespace ShapesController
 
             circle2.XDisplay();
             // circle2.Display(); compile error
-
-
         }
     }
 }

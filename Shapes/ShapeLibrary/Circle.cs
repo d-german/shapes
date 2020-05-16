@@ -3,8 +3,10 @@ using XShapeLibrary;
 
 namespace ShapeLibrary
 {
-    public class Circle : XCircle, IShape
+    public class Circle : IShape
     {
+        private readonly XCircle _xCircle = new XCircle();
+
         public void SetLocation(Point p)
         {
             Console.WriteLine($"{this} - {nameof(SetLocation)}");
@@ -28,7 +30,7 @@ namespace ShapeLibrary
 
         public void Display()
         {
-            XDisplay(); // using base class
+            _xCircle.XDisplay(); // using contained XCircle
         }
 
         public void UnDisplay()

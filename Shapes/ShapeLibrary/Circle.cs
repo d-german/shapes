@@ -5,7 +5,12 @@ namespace ShapeLibrary
 {
     public class Circle : IShape
     {
-        private readonly XCircle _xCircle = new XCircle();
+        private readonly XCircle _xCircle;
+
+        public Circle(XCircle xCircle)
+        {
+            _xCircle = xCircle;
+        }
 
         public void SetLocation(Point p)
         {

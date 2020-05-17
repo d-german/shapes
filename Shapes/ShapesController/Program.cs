@@ -1,4 +1,5 @@
 ﻿using ShapeLibrary;
+using XShapeLibrary;
 
 namespace ShapesController
 {
@@ -6,12 +7,12 @@ namespace ShapesController
     {
         private static void Main()
         {
-            Circle circle = new Circle();
+            Circle circle = new Circle(new XCircle());
 
             // circle.XDisplay();
             circle.Display();
 
-            IShape circle1 = new Circle();
+            IShape circle1 = new Circle(new XCircle());
 
             circle1.Display();
             // circle1.XDisplay(); compile error

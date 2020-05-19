@@ -5,7 +5,8 @@ namespace ShapeLibrary
 {
     public class Circle : IShape
     {
-        private readonly XCircle _xCircle;
+        private readonly XCircle _xCircle; // aggregation
+        // private readonly XCircle _xCircle = new XCircle(); // composition
 
         public Circle(XCircle xCircle)
         {

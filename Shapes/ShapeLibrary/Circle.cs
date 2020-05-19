@@ -5,7 +5,7 @@ namespace ShapeLibrary
 {
     public class Circle : IShape
     {
-        // TODO: depending on XCircle violated the DIP
+        // TODO: depending on XCircle violates the DIP
 
         private readonly XCircle _xCircle; // aggregation
         // private readonly XCircle _xCircle = new XCircle(); // composition

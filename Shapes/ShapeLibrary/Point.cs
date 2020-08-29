@@ -1,5 +1,8 @@
-﻿public struct Point
+﻿namespace ShapeLibrary
 {
-    public int X;
-    public int Y;
+    public struct Point
+    {
+        public int X;
+        public int Y;
+    }
 }

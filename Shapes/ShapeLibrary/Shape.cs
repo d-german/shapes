@@ -15,7 +15,11 @@ namespace ShapeLibrary
         public abstract Point GetLocation();
         public abstract void SetColor(Color rbg);
         public abstract void Fill();
-        public abstract void Display(); //TODO: make this a virtual example with Console.WriteLine();
+        public virtual void Fill(Color rbg)
+        {
+            Console.WriteLine($"Filling shape with {rbg}");
+        }
+        public abstract void Display();
         public abstract void UnDisplay();
 
         public override string ToString()

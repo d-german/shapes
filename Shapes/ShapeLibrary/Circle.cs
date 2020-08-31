@@ -28,6 +28,7 @@ namespace ShapeLibrary
 
         public void Display()
         {
+            // we do not care about any other methods than XDisplay
             XDisplay(); // using base class
         }
 

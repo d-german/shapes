@@ -8,5 +8,7 @@ namespace XShapeLibrary
         {
             Console.WriteLine($"{this} - {nameof(XDisplay)}");
         }
+
+        // other methods and data we do not need
     }
 }

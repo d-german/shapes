@@ -34,5 +34,10 @@ namespace ShapeLibrary
         {
             Console.WriteLine($"{this} - {nameof(UnDisplay)}");
         }
+
+        public override double Area
+        {
+            get { return 50; }
+        }
     }
 }

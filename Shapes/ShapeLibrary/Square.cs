@@ -4,6 +4,9 @@ namespace ShapeLibrary
 {
     public class Square : Shape
     {
+        public int Length { get; set; }
+        public int Width { get; set; }
+
         public override void SetLocation(Point p)
         {
             Console.WriteLine($"{this} - {nameof(SetLocation)}");
@@ -37,7 +40,7 @@ namespace ShapeLibrary
 
         public override double Area
         {
-            get { return 50; }
+            get { return Length * Width; }
         }
     }
 }

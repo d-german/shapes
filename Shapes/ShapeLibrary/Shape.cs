@@ -6,6 +6,9 @@ namespace ShapeLibrary
     {
         private static int _id = 0;
 
+        /// <summary>
+        /// Note it is good practice to declare this protected instead of public
+        /// </summary>
         protected Shape()
         {
             _id++;

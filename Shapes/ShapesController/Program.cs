@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ShapeLibrary;
-
-// ReSharper disable All
 
 namespace ShapesController
 {
@@ -11,11 +10,12 @@ namespace ShapesController
         {
             var shapes = new List<Shape>
             {
-                new Square()
+                new Square {Length = 1, Width = 1}
             };
 
             Display(shapes);
             Animate(new Line());
+            PrintArea(shapes);
         }
 
         private static void Display(IEnumerable<Shape> shapes)
@@ -36,20 +36,13 @@ namespace ShapesController
                 Y = --currentLocation.X
             });
         }
+
+        private static void PrintArea(IEnumerable<Shape> shapes)
+        {
+            foreach (var shape in shapes)
+            {
+                Console.WriteLine($"Area = {shape.Area}");
+            }
+        }
     }
-}
-
-public interface IAbc
-{
-    // A
-    void A();
-    void AA();
-    void AAA();
-
-    // B
-    void B();
-    void BB();
-
-    // C
-    void C();
 }

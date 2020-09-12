@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using ShapeLibrary;
 
+// ReSharper disable All
+
 namespace ShapesController
 {
     internal static class Program
@@ -35,4 +37,19 @@ namespace ShapesController
             });
         }
     }
+}
+
+public interface IAbc
+{
+    // A
+    void A();
+    void AA();
+    void AAA();
+
+    // B
+    void B();
+    void BB();
+
+    // C
+    void C();
 }
